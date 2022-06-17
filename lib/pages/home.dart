@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class Homepage extends StatelessWidget {
+
+  
   @override
   Widget build(BuildContext context) {
     int day = 10;
@@ -8,13 +10,17 @@ class Homepage extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
+       
         title: Text("My First flutter App "),
       ),
-      body: Center(
+        
+          body: Center(
         child: Container(
+          
           child: Text(" $name"),
         ),
       ),
+      
       drawer: Drawer(),
     );
   }
