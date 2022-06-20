@@ -14,6 +14,7 @@ void main() {
   };
   runApp(const MyApp());
 }
+
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
   @override
@@ -26,7 +27,7 @@ class MyApp extends StatelessWidget {
       darkTheme: ThemeData(
         brightness: Brightness.dark,
       ),
-      initialRoute: "/",
+      initialRoute: Myrouts.homeRoute,
       routes: {
         "/": (context) => Loginpage(),
         Myrouts.homeRoute: (context) => Homepage(),
