@@ -1,4 +1,4 @@
-// ignore_for_file: unused_import
+// ignore_for_file: unused_import, prefer_const_constructors
 
 import 'dart:io';
 
@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_1/pages/begin-page.dart';
 import 'package:flutter_application_1/pages/home.dart';
 import 'package:flutter_application_1/utils/routs.dart';
+import 'package:flutter_application_1/widgets/themes.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 void main() {
@@ -21,12 +22,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       themeMode: ThemeMode.light,
-      theme: ThemeData(
-          primarySwatch: Colors.deepPurple,
-          fontFamily: GoogleFonts.lato().fontFamily),
-      darkTheme: ThemeData(
-        brightness: Brightness.dark,
-      ),
+      theme: Mytheme.lightheme(context),
+      darkTheme: Mytheme.darktheme(context),
       initialRoute: Myrouts.homeRoute,
       routes: {
         "/": (context) => Loginpage(),
