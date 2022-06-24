@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, prefer_const_declarations
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -23,6 +23,7 @@ class MyDrawer extends StatelessWidget {
                   accountName: Text("Jigar Prajapati"),
                   accountEmail: Text("jigarprajapati@gmail.com"),
                   currentAccountPicture: CircleAvatar(
+                    
                     backgroundImage: NetworkImage(imageurl),
                   ),
                 )),

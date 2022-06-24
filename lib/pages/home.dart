@@ -2,24 +2,26 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/widgets/drawer.dart';
+import 'package:flutter_application_1/pages/catalog.dart';
+import 'package:flutter_application_1/widgets/item_widget.dart';
 
 class Homepage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    int day = 10;
-    String name = "Welcome to $day days of flutter";
-
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          "My First flutter App ",
+          "Catalog App ",
           style: TextStyle(color: Colors.black),
         ),
       ),
-      body: Center(
-        child: Container(
-          child: Text(" $name"),
-        ),
+      body: ListView.builder(
+        itemCount: CatalogModel.Items.length,
+        itemBuilder: (context, index) {
+          return Itemwidget(
+            item: CatalogModel.Items[index],
+          );
+        },
       ),
       drawer: MyDrawer(),
     );
