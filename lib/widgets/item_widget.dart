@@ -1,3 +1,5 @@
+// ignore_for_file: unnecessary_null_comparison, prefer_const_constructors, avoid_print
+
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/pages/catalog.dart';
 
@@ -10,6 +12,7 @@ class Itemwidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
       elevation: 3.0,
+      shape: StadiumBorder(),
       child: ListTile(
         onTap: () {
           print("${item.name} pressed)");

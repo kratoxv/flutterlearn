@@ -1,0 +1,44 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "morzulolo",
+      "desc": "this the best power",
+      "price": "₹999",
+      "color": "Color.fromRGBO(0, 0, 0, 1)",
+      "image": "https://www.mozilla.org/media/img/logos/edge/logo-edge.016a47a7fab3.png"
+    },
+    {
+      "id": 2,
+      "name": "laptop",
+      "desc": "this the best power",
+      "price": "₹999",
+      "color": "Color.fromRGBO(0, 0, 0, 1)",
+      "image": "https://www.mozilla.org/media/img/logos/edge/logo-edge.016a47a7fab3.png"
+    },
+    {
+      "id": 3,
+      "name": "tarnsico",
+      "desc": "this the best power",
+      "price": "₹999",
+      "color": "Color.fromRGBO(0, 0, 0, 1)",
+      "image": "https://www.mozilla.org/media/img/logos/edge/logo-edge.016a47a7fab3.png"
+    },
+    {
+      "id": 4,
+      "name": "marsolona",
+      "desc": "this the best power",
+      "price": "₹999",
+      "color": "Color.fromRGBO(0, 0, 0, 1)",
+      "image": "https://www.mozilla.org/media/img/logos/edge/logo-edge.016a47a7fab3.png"
+    },
+    {
+      "id": 5,
+      "name": "ventosa",
+      "desc": "this the best power",
+      "price": "₹999",
+      "color": "Color.fromRGBO(0, 0, 0, 1)",
+      "image": "https://www.mozilla.org/media/img/logos/edge/logo-edge.016a47a7fab3.png"
+    }
+  ]
+}

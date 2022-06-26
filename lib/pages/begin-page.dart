@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors, sort_child_properties_last
+// ignore_for_file: prefer_const_constructors, sort_child_properties_last, file_names, unnecessary_import, use_build_context_synchronously, duplicate_ignore
 
 import 'dart:ui';
 
