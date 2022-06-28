@@ -1,4 +1,4 @@
-// ignore_for_file: use_key_in_widget_constructors, prefer_const_constructors, avoid_unnecessary_containers, unused_import, avoid_print, avoid_typevar arameter_names
+// ignore_for_file: use_key_in_widget_constructors, prefer_const_constructors, avoid_unnecessary_containers, unused_import, avoid_print, avoid_typevar arameter_names, sort_child_properties_last, unnecessary_null_comparison
 
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/widgets/drawer.dart';
@@ -16,18 +16,16 @@ class _HomepageState extends State<Homepage> {
   @override
   void initState() {
     super.initState();
-    loaddat();
+    loadData();
   }
 
-  loaddat() async {
-    final catalogjason =
-        await rootBundle.loadString("assets/files/product.json");
-    final decodedata = jsonDecode(catalogjason);
-    final productdata = decodedata["products"];
-    CatalogModel.Items = List.from(productdata)
-        .map((Item) => Item.fromMap(Item))
-        .toList() as List<Item>;
-
+  loadData() async {
+    await Future.delayed(Duration(seconds: 2));
+    var catalogjson = await rootBundle.loadString("assets/files/product.json");
+    var decodedata = jsonDecode(catalogjson);
+    var productData = decodedata["products"];
+    CatalogModel.items =
+        List.from(productData).map<Item>((item) => Item.fromMap(item)).toList();
     setState(() {});
   }
 
@@ -40,14 +38,20 @@ class _HomepageState extends State<Homepage> {
           style: TextStyle(color: Colors.black),
         ),
       ),
-      body: ListView.builder(
-        
-        itemCount: CatalogModel.Items.length,
-        itemBuilder: (context, index) {
-          return Itemwidget(
-            item: CatalogModel.Items[index],
-          );
-        },
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: (CatalogModel.items != null && CatalogModel.items.isNotEmpty)
+            ? ListView.builder(
+                itemCount: CatalogModel.items.length,
+                itemBuilder: (context, index) {
+                  return Itemwidget(
+                    item: CatalogModel.items[index],
+                  );
+                },
+              )
+            : Center(
+                child: CircularProgressIndicator(),
+              ),
       ),
       drawer: MyDrawer(),
     );
