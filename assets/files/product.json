@@ -2,43 +2,51 @@
   "products": [
     {
       "id": 1,
-      "name": "morzulolo",
+      "name": "Morzulolo ",
       "desc": "this the best power",
       "price": "₹999",
       "color": "Color.fromRGBO(0, 0, 0, 1)",
-      "image": "https://www.mozilla.org/media/img/logos/edge/logo-edge.016a47a7fab3.png"
+      "image": "https://tse3.mm.bing.net/th?id=OIP.FOd5uO66G3XdOph9PEGo6wEsCo&pid=Api&P=0&w=312&h=175"
     },
     {
       "id": 2,
-      "name": "laptop",
+      "name": "Laptop",
       "desc": "this the best power",
-      "price": "₹999",
+      "price": "₹100000",
       "color": "Color.fromRGBO(0, 0, 0, 1)",
-      "image": "https://www.mozilla.org/media/img/logos/edge/logo-edge.016a47a7fab3.png"
+      "image": "https://tse4.explicit.bing.net/th?id=OIP.SwTOgDwfdJW9sTrJ5EVzCwHaFj&pid=Api&P=0&w=217&h=162"
     },
     {
       "id": 3,
-      "name": "tarnsico",
+      "name": "Tarnsiver",
       "desc": "this the best power",
-      "price": "₹999",
+      "price": "₹800",
       "color": "Color.fromRGBO(0, 0, 0, 1)",
-      "image": "https://www.mozilla.org/media/img/logos/edge/logo-edge.016a47a7fab3.png"
+      "image": "https://tse3.mm.bing.net/th?id=OIP.ud958VRzRTUlixXkJgC_SgHaEK&pid=Api&P=0&w=300&h=169"
     },
     {
       "id": 4,
-      "name": "marsolona",
+      "name": "Chendi",
       "desc": "this the best power",
-      "price": "₹999",
+      "price": "₹2000",
       "color": "Color.fromRGBO(0, 0, 0, 1)",
-      "image": "https://www.mozilla.org/media/img/logos/edge/logo-edge.016a47a7fab3.png"
+      "image": "http://scienceline.org/wp-content/uploads/2012/12/b1gXYfSmHZw-OPoafrpqz_s-original.jpg"
     },
     {
       "id": 5,
-      "name": "ventosa",
+      "name": "Ventosa",
       "desc": "this the best power",
-      "price": "₹999",
+      "price": "₹400",
       "color": "Color.fromRGBO(0, 0, 0, 1)",
-      "image": "https://www.mozilla.org/media/img/logos/edge/logo-edge.016a47a7fab3.png"
+      "image": "https://tse2.mm.bing.net/th?id=OIP.qcGh6bSNWP6vOMsDM9kl8gHaEK&pid=Api&P=0&w=280&h=157"
+    },
+    {
+      "id": 6,
+      "name": "Ventosa",
+      "desc": "this the best power",
+      "price": "₹400",
+      "color": "Color.fromRGBO(0, 0, 0, 1)",
+      "image": "https://tse2.mm.bing.net/th?id=OIP.qcGh6bSNWP6vOMsDM9kl8gHaEK&pid=Api&P=0&w=280&h=157"
     }
   ]
 }

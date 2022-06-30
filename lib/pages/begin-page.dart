@@ -41,18 +41,22 @@ class _LoginpageState extends State<Loginpage> {
           children: [
             Column(
               children: [
+                // ignore: prefer_const_constructors
+                SizedBox(
+                  height: 30.0,
+                ),
                 Image.asset(
-                  "assets/images/flutter login_image.png",
-                  fit: BoxFit.cover,
+                  "assets/images/th.jpg",
+                  fit: BoxFit.fitHeight,
                 ),
 
                 // ignore: prefer_const_constructors
                 SizedBox(
-                  height: 20.0,
+                  height: 15.0,
                 ),
                 // ignore: prefer_const_constructors
                 Text(
-                  "Welcome (●'◡'●) $name",
+                  "Welcome  $name",
                   style: TextStyle(
                       color: Color.fromARGB(255, 58, 50, 38),
                       fontSize: 30,
