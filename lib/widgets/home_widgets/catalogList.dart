@@ -59,7 +59,7 @@ class Catalogitem extends StatelessWidget {
                     ),
                     child: "Buy".text.make())
               ],
-            ).pOnly(right: 8.0)
+            ).pOnly(right: 6.0)
           ],
         ))
       ],
