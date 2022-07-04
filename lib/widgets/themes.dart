@@ -17,6 +17,6 @@ class Mytheme {
         brightness: Brightness.dark,
       );
 
-  static Color creamecolor = Color.fromARGB(255, 243, 239, 239);
+  static Color creamecolor = Color.fromARGB(224, 210, 206, 206);
   static Color darkcolor = Color.fromARGB(0, 3, 3, 3);
 }
