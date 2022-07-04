@@ -46,7 +46,7 @@ class Catalogitem extends StatelessWidget {
           children: [
             catalog.name.text.bold.make(),
             catalog.desc.text.textStyle(context.captionStyle).make(),
-            10.heightBox,
+            5.heightBox,
             ButtonBar(
               alignment: MainAxisAlignment.spaceAround,
               buttonPadding: EdgeInsets.zero,
@@ -63,6 +63,6 @@ class Catalogitem extends StatelessWidget {
           ],
         ))
       ],
-    )).white.roundedSM.square(150).make().py16();
+    )).white.roundedSM.square(130).make().py16();
   }
 }

@@ -28,7 +28,7 @@ class HomeDetailpages extends StatelessWidget {
                 style: ButtonStyle(
                   shape: MaterialStateProperty.all(StadiumBorder()),
                 ),
-                child: "Add to cart".text.xl.make())
+                child: "Add to cart".text.xl.white.make())
           ],
         ).pOnly(right: 8.0),
       ),
