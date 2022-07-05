@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors, unused_element, deprecated_member_use, non_constant_identifier_names
+
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/widgets/themes.dart';
 import 'package:velocity_x/velocity_x.dart';
@@ -34,10 +36,13 @@ class _CartTotal extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
-          "\₹9999".text.xl4.color(context.theme.accentColor).make(),
+          "₹9999".text.xl4.color(context.theme.accentColor).make(),
           30.widthBox,
           ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                    content: "Buying is not supported yet.".text.make()));
+              },
               child: "Buy".text.center.white.make().w20(context))
         ],
       ),
