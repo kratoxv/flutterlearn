@@ -1,5 +1,6 @@
+// ignore_for_file: file_names, use_key_in_widget_constructors, unnecessary_null_comparison
+
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/pages/cartmodel.dart';
 import 'package:flutter_application_1/pages/catalog.dart';
 import 'package:flutter_application_1/pages/home_detail_pages.dart';
 import 'package:flutter_application_1/widgets/home_widgets/Catalog_image.dart';

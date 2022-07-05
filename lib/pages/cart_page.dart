@@ -1,6 +1,7 @@
-// ignore_for_file: prefer_const_constructors, unused_element, deprecated_member_use, non_constant_identifier_names
+// ignore_for_file: prefer_const_constructors, unused_element, deprecated_member_use, non_constant_identifier_names, no_leading_underscores_for_local_identifiers
 
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/Core/Store.dart';
 import 'package:flutter_application_1/pages/cartmodel.dart';
 import 'package:flutter_application_1/widgets/themes.dart';
 import 'package:velocity_x/velocity_x.dart';
@@ -32,13 +33,13 @@ class _CartTotal extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final _cart = CartModel();
+    final CartModel _cart = (VxState.store as MyStore).cart;
     return SizedBox(
       height: 200,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
-          "\₹${_cart.totalprice}"
+          "₹${_cart.totalprice}"
               .text
               .xl4
               .color(context.theme.accentColor)
@@ -56,18 +57,10 @@ class _CartTotal extends StatelessWidget {
   }
 }
 
-class _CartList extends StatefulWidget {
-  const _CartList({super.key});
-
-  @override
-  State<_CartList> createState() => __CartListState();
-}
-
-class __CartListState extends State<_CartList> {
-  final _cart = CartModel();
-
+class _CartList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    final CartModel _cart = (VxState.store as MyStore).cart;
     return _cart.items.isEmpty
         ? "Cart is Empty".text.xl3.makeCentered()
         : ListView.builder(
@@ -78,7 +71,7 @@ class __CartListState extends State<_CartList> {
                     icon: Icon(Icons.remove_circle_outline),
                     onPressed: () {
                       _cart.remove(_cart.items[index]);
-                      setState(() {});
+                      //setState(() {});
                     },
                   ),
                   title: _cart.items[index].name.text.make(),

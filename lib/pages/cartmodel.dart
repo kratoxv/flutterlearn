@@ -1,14 +1,11 @@
-// ignore_for_file: unused_import, unused_element
+// ignore_for_file: unused_import, unused_element, unnecessary_null_comparison
 
 import 'package:flutter/cupertino.dart';
+import 'package:flutter_application_1/Core/Store.dart';
 import 'package:flutter_application_1/pages/catalog.dart';
+import 'package:velocity_x/velocity_x.dart';
 
 class CartModel {
-  static final cartModel = CartModel._internal();
-
-  CartModel._internal();
-  factory CartModel() => cartModel;
-  
   late CatalogModel _catalog;
 
   final List<int> _itemIds = [];
@@ -32,5 +29,16 @@ class CartModel {
 
   void remove(Item item) {
     _itemIds.remove(item.id);
+  }
+}
+
+class Addmutation extends VxMutation<MyStore> {
+ final Item  item;
+
+  Addmutation(this.item);
+  @override
+  perform() {
+    // TODO: implement perform
+    store?.cart._itemIds.add(item.id);
   }
 }

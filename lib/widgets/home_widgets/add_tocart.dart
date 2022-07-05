@@ -1,41 +1,41 @@
+// ignore_for_file: unused_field, no_leading_underscores_for_local_identifiers, prefer_const_constructors, duplicate_ignore, prefer_const_constructors_in_immutables
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/Core/Store.dart';
 import 'package:flutter_application_1/pages/cartmodel.dart';
 import 'package:flutter_application_1/pages/catalog.dart';
 import 'package:velocity_x/velocity_x.dart';
+import 'package:vxstate/vxstate.dart';
 
-class Addtocart extends StatefulWidget {
+class Addtocart extends StatelessWidget {
   final Item catalog;
-  const Addtocart({
+
+  Addtocart({
     Key? key,
     required this.catalog,
   }) : super(key: key);
 
   @override
-  State<Addtocart> createState() => _AddtocartState();
-}
-
-class _AddtocartState extends State<Addtocart> {
-  final _cart = CartModel();
-  @override
   Widget build(BuildContext context) {
-    bool isAdded = _cart.items.contains(widget.catalog) ?? false;
+    VxState.watch(context, on: [Addmutation]);
+    final CartModel _cart = (VxState.store as MyStore).cart;
+    final CatalogModel _catalog = (VxState.store as MyStore).catalog;
+
+    bool isincart = _cart.items.contains(catalog);
+
     return ElevatedButton(
         onPressed: () {
-          if (!isAdded) {
-            isAdded = isAdded.toggle();
-            final _catalog = CatalogModel();
-            final _cart = CartModel();
-            _cart.catalog = _catalog;
-            _cart.add(widget.catalog);
-
-            setState(() {});
+          if (isincart == false) {
+            Addmutation(catalog);
+            // setState(() {});
           }
         },
         style: ButtonStyle(
           shape: MaterialStateProperty.all(StadiumBorder()),
         ),
         child:
-            isAdded ? Icon(Icons.done) : Icon(CupertinoIcons.cart_badge_plus));
+            // ignore: prefer_const_constructors
+            isincart ? Icon(Icons.done) : Icon(CupertinoIcons.cart_badge_plus));
   }
 }
