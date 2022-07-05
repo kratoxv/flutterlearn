@@ -4,6 +4,11 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter_application_1/pages/catalog.dart';
 
 class CartModel {
+  static final cartModel = CartModel._internal();
+
+  CartModel._internal();
+  factory CartModel() => cartModel;
+  
   late CatalogModel _catalog;
 
   final List<int> _itemIds = [];
@@ -18,8 +23,8 @@ class CartModel {
   List<Item> get items => _itemIds.map((id) => _catalog.getById(id)).toList();
 
   // ignore: non_constant_identifier_names
-  num  get totalprice => items.fold(0, (total, current)  => total + current.price;
-);
+  num get totalprice =>
+      items.fold(0, (total, current) => total + current.price);
 
   void add(Item item) {
     _itemIds.add(item.id);

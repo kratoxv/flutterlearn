@@ -4,7 +4,7 @@
       "id": 1,
       "name": "Redmi 9 ",
       "desc": "Now Redmi 9 is new Sereas for Mi",
-      "price": "₹12,000",
+      "price": 12000,
       "color": "Color.fromRGBO(0, 0, 0, 1)",
       "image": "https://tse4.mm.bing.net/th?id=OIP.5pPdEl2fr82r_cFNseehcQHaHa&pid=Api&P=0&w=173&h=173"
     },
@@ -12,7 +12,7 @@
       "id": 2,
       "name": "Asus Laptop",
       "desc": "This laptop is gamming laptop.",
-      "price": "₹50,000",
+      "price": 50000,
       "color": "Color.fromRGBO(0, 0, 0, 1)",
       "image": "https://tse4.mm.bing.net/th?id=OIP.xGHAvD6abNYu4C3VsPhKgwHaHa&pid=Api&P=0&w=160&h=160"
     },
@@ -20,7 +20,7 @@
       "id": 3,
       "name": "Macbook",
       "desc": "Macbook Is new Features are add in this device.",
-      "price": "₹80,000",
+      "price": 80000,
       "color": "Color.fromRGBO(0, 0, 0, 1)",
       "image": "https://tse3.mm.bing.net/th?id=OIP.NMfH83OD-v36ZjG0AxpIewHaHa&pid=Api&P=0&w=177&h=177"
     },
@@ -28,7 +28,7 @@
       "id": 4,
       "name": "Gradel Pc",
       "desc": "This Pc are power boost .",
-      "price": "₹2,00,000",
+      "price": 200000,
       "color": "Color.fromRGBO(0, 0, 0, 1)",
       "image": "https://tse2.mm.bing.net/th?id=OIP.OhyD0trm_o_voU2xtDZDBwHaHa&pid=Api&P=0&w=160&h=160"
     },
@@ -36,7 +36,7 @@
       "id": 5,
       "name": "Ps-5",
       "desc": "Best gamming experience.",
-      "price": "₹40,000",
+      "price": 40000,
       "color": "Color.fromRGBO(0, 0, 0, 1)",
       "image": "https://tse1.mm.bing.net/th?id=OIP.nrc1ZRpVxoIeKAdM4_ygYAHaIu&pid=Api&P=0&w=139&h=164"
     },
@@ -44,7 +44,7 @@
       "id": 6,
       "name": "Asus Monitor",
       "desc": "This Monitor is High resolution support.",
-      "price": "₹40,000",
+      "price": 40000,
       "color": "Color.fromRGBO(0, 0, 0, 1)",
       "image": "https://tse1.mm.bing.net/th?id=OIP.HfkFqD2eIi8eeOQSYKFHPAHaFj&pid=Api&P=0&w=211&h=158"
     }

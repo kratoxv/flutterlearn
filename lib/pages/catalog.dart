@@ -1,9 +1,17 @@
 // ignore_for_file: unused_import, non_constant_identifier_names, null_closures
 
 import 'package:flutter/material.dart';
+import 'cartmodel.dart';
+import 'dart:convert';
 
 class CatalogModel {
+  static final catModel = CatalogModel._internal();
+
+  CatalogModel._internal();
+  factory CatalogModel() => catModel;
+
   static List<Item> items = [];
+
   Item getById(int id) =>
       items.firstWhere((element) => element.id == id, orElse: null);
 
@@ -14,7 +22,7 @@ class Item {
   int id;
   final String name;
   final String desc;
-  final String price;
+  final int price;
   final String color;
   final String image;
 
