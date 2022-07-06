@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors, unused_element, deprecated_member_use, non_constant_identifier_names, no_leading_underscores_for_local_identifiers
+// ignore_for_file: prefer_const_constructors, unused_element, deprecated_member_use, non_constant_identifier_names, no_leading_underscores_for_local_identifiers, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/Core/Store.dart';

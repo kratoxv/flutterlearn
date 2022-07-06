@@ -11,6 +11,7 @@ import 'package:flutter_application_1/utils/routs.dart';
 import 'package:flutter_application_1/widgets/themes.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:velocity_x/velocity_x.dart';
+import 'package:url_strategy/url_strategy.dart';
 
 void main() {
   runApp(VxState(store: MyStore(), child: MyApp()));

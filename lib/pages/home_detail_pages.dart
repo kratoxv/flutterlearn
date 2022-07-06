@@ -23,7 +23,7 @@ class HomeDetailpages extends StatelessWidget {
           alignment: MainAxisAlignment.spaceAround,
           buttonPadding: EdgeInsets.zero,
           children: [
-            catalog.price.text.bold.xl4.make(),
+            "\₹${catalog.price}".text.bold.xl4.make(),
             Addtocart(catalog: catalog).wh(120, 50)
           ],
         ).pOnly(right: 8.0),
