@@ -6,7 +6,7 @@ import 'package:flutter_application_1/Core/Store.dart';
 import 'package:flutter_application_1/pages/cartmodel.dart';
 import 'package:flutter_application_1/pages/catalog.dart';
 import 'package:velocity_x/velocity_x.dart';
-import 'package:vxstate/vxstate.dart';
+
 
 class Addtocart extends StatelessWidget {
   final Item catalog;

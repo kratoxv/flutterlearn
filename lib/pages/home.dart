@@ -2,6 +2,8 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/Core/Store.dart';
+import 'package:flutter_application_1/pages/cartmodel.dart';
 import 'package:flutter_application_1/utils/routs.dart';
 
 import 'package:flutter_application_1/widgets/drawer.dart';
@@ -13,6 +15,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_application_1/widgets/themes.dart';
 import 'dart:convert';
 import 'package:velocity_x/velocity_x.dart';
+import 'package:http/http.dart' as http;
 
 class Homepage extends StatefulWidget {
   @override
@@ -20,6 +23,7 @@ class Homepage extends StatefulWidget {
 }
 
 class _HomepageState extends State<Homepage> {
+  final url ="";
   @override
   void initState() {
     super.initState();
@@ -38,11 +42,21 @@ class _HomepageState extends State<Homepage> {
 
   @override
   Widget build(BuildContext context) {
+    final _cart = (VxState.store as MyStore).cart;
     return Scaffold(
       backgroundColor: Mytheme.creamecolor,
-      floatingActionButton: FloatingActionButton(
-        onPressed: () => Navigator.pushNamed(context, Myrouts.cartlRoute),
-        child: Icon(CupertinoIcons.cart),
+      floatingActionButton: VxBuilder(
+        mutations: {Addmutation, Removemutation},
+        builder: (BuildContext context, store, VxStatus? status) =>
+            FloatingActionButton(
+          onPressed: () => Navigator.pushNamed(context, Myrouts.cartlRoute),
+          child: Icon(CupertinoIcons.cart),
+        ).badge(
+                color: Color.fromARGB(255, 226, 211, 211),
+                size: 22,
+                count: _cart.items.length,
+                textStyle: TextStyle(
+                    color: Colors.black, fontWeight: FontWeight.bold)),
       ),
       body: SafeArea(
         child: Container(
